@@ -1,12 +1,12 @@
 /*
   Common styles to all themes
+  Please to customice the design create a custom 'theme' below
 */
 
 .pure-css-select-style {
   width: 100%;
   overflow: hidden;
 }
-
 .pure-css-select-style select {
   width: 100%;
   padding-right: 32px;
@@ -23,14 +23,11 @@
   text-indent: 0.01px;
   text-overflow: '';
 }
-
 /* Hide arrow on IE10*/
 .pure-css-select-style select::-ms-expand {
   display: none;
 }
-
-/* IE9 */
-/* To hide select arrow make the select overflow on the right side */
+/* IE9: To hide select arrow we make the select overflow on the right side there is not another way :( */
 @media screen and (min-width:0\0) {
   .pure-css-select-style select {
     width: 130%;
