@@ -1,0 +1,139 @@
+/*
+  Common styles to all themes
+*/
+
+.pure-css-select-style {
+  width: 100%;
+  overflow: hidden;
+}
+
+.pure-css-select-style select {
+  width: 100%;
+  padding-right: 32px;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+
+  /* Hide arrow on FF */
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+
+/* Hide arrow on IE10*/
+.pure-css-select-style select::-ms-expand {
+  display: none;
+}
+
+/* IE9 */
+/* To hide select arrow make the select overflow on the right side */
+@media screen and (min-width:0\0) {
+  .pure-css-select-style select {
+    width: 130%;
+  }
+}
+
+/* Themes default ----------------------------------------------------------- */
+.theme-default {
+  border: 1px solid #bbb;
+  border-radius: 2px;
+  /* <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path d="M4.33 8.5L0 1L8.66 1z" fill="#666"/></svg> */
+  background: #fff url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%3E%3Cpath%20d%3D%22M4.33%208.5L0%201L8.66%201z%22%20fill%3D%22%23666%22%2F%3E%3C%2Fsvg%3E') right 10px center no-repeat;
+}
+.theme-default select {
+  padding: 12px 32px 12px 8px;
+  /* You can style text of the active select option */
+  font: 400 18px/1 'Open Sans', sans-serif;
+  color: #666;
+}
+
+/* Theme default with line -------------------------------------------------- */
+.theme-default-w-line {
+  position: relative;
+  border: 1px solid #bbb;
+  border-radius: 2px;
+  /* <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path d="M4.33 8.5L0 1L8.66 1z" fill="#666"/></svg> */
+  background: #fff url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%3E%3Cpath%20d%3D%22M4.33%208.5L0%201L8.66%201z%22%20fill%3D%22%23666%22%2F%3E%3C%2Fsvg%3E') right 13px center no-repeat;
+}
+.theme-default-w-line:after {
+  content: '';
+  position: absolute;
+  width: 1px; top: 0; bottom: 0; right: 40px;
+  border-left: 1px solid #bbb;
+}
+.theme-default-w-line select {
+  padding: 12px 40px 12px 8px;
+  font: 400 18px/1 'Open Sans', sans-serif;
+  color: #666;
+}
+
+/* Square ------------------------------------------------------------------- */
+.theme-square {
+  border: 3px solid #27ae60;
+  /* <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path d="M4.33 8.5L0 1L8.66 1z" fill="#27ae60"/></svg> */
+  background: #fff url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%3E%3Cpath%20d%3D%22M4.33%208.5L0%201L8.66%201z%22%20fill%3D%22%2327ae60%22%2F%3E%3C%2Fsvg%3E') right 10px center no-repeat;
+}
+.theme-square select {
+  padding: 12px 32px 12px 12px;
+  /* You can style text of the active select option */
+  font: 700 16px/1 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #27ae60;
+}
+
+/* Rounded ------------------------------------------------------------------ */
+.theme-rounded {
+  border: 2px solid #2980b9;
+  border-radius: 50px;
+  /* <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22"><path d="M9 17L2.07 5L15.93 5z" stroke-width="2" stroke="#2980b9" fill="transparent"/></svg> */
+  background: #fff url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2222%22%20viewBox%3D%220%200%2018%2022%22%3E%3Cpath%20d%3D%22M9%2017L2.07%205L15.93%205z%22%20stroke-width%3D%222%22%20stroke%3D%22%232980b9%22%20fill%3D%22transparent%22%2F%3E%3C%2Fsvg%3E') right 14px center no-repeat;
+}
+.theme-rounded select {
+  padding: 12px 32px 12px 16px;
+  font: 400 16px/1 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  color: #2980b9;
+}
+
+/* Rounded and filled ------------------------------------------------------- */
+.theme-filled {
+  border-radius: 50px;
+  /* <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22"><path d="M9 17L2.07 5L15.93 5z" fill="#fff"/></svg> */
+  background: #2980b9 url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2222%22%20viewBox%3D%220%200%2018%2022%22%3E%3Cpath%20d%3D%22M9%2017L2.07%205L15.93%205z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E') right 14px center no-repeat;
+  box-shadow: 0px 10px 10px -6px rgba(0,0,0,0.25);
+}
+.theme-filled select {
+  padding: 12px 32px 12px 16px;
+  font: 400 16px/1 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.theme-filled select option {
+  color: #333;
+}
+
+/* Background gradient ------------------------------------------------------ */
+.theme-gradient {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  #ecf0f1
+  #bdc3c7
+
+  background-color: #ecf0f1;
+  /* <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path d="M4.33 8.5L0 1L8.66 1z" fill="#666"/></svg> */
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%3E%3Cpath%20d%3D%22M4.33%208.5L0%201L8.66%201z%22%20fill%3D%22%23666%22%2F%3E%3C%2Fsvg%3E');
+  background-position:right 10px center;
+  background-repeat: no-repeat, repeat;
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%3E%3Cpath%20d%3D%22M4.33%208.5L0%201L8.66%201z%22%20fill%3D%22%23666%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(#ecf0f1, #bdc3c7); /* W3C */
+}
+.theme-gradient select {
+  padding: 12px 32px 12px 16px;
+  font: 700 14px/1 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  color: #666;
+}
