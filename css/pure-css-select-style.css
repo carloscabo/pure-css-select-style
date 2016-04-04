@@ -23,12 +23,6 @@
   text-indent: 0.01px;
   text-overflow: ellipsis;
 }
-/* Awfull hack to remove select outline in Firefox
-.pure-css-select-style select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #000;
-}
-*/
 /* Hide arrow on IE10*/
 .pure-css-select-style select::-ms-expand {
   display: none;
