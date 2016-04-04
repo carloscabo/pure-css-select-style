@@ -9,7 +9,7 @@
 }
 .pure-css-select-style select {
   width: 100%;
-  padding-right: 32px;
+  padding-right: 38px;
   border: none;
   box-shadow: none;
   background: transparent;
@@ -21,11 +21,21 @@
   /* Hide arrow on FF */
   -moz-appearance: none;
   text-indent: 0.01px;
-  text-overflow: '';
+  text-overflow: ellipsis;
 }
+/* Awfull hack to remove select outline in Firefox
+.pure-css-select-style select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000; /* Text color black */
+}
+*/
 /* Hide arrow on IE10*/
 .pure-css-select-style select::-ms-expand {
   display: none;
+}
+.pure-css-select-style optgroup {
+  color: inherit;
+  font: inherit;
 }
 /* IE9: To hide select arrow we make the select overflow on the right side there is not another way :( */
 @media screen and (min-width:0\0) {
@@ -42,7 +52,7 @@
   background: #fff url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%3E%3Cpath%20d%3D%22M4.33%208.5L0%201L8.66%201z%22%20fill%3D%22%23666%22%2F%3E%3C%2Fsvg%3E') right 10px center no-repeat;
 }
 .theme-default select {
-  padding: 12px 32px 12px 8px;
+  padding: 12px 38px 12px 8px;
   /* You can style text of the active select option */
   font: 400 18px/1 'Open Sans', sans-serif;
   color: #666;
@@ -75,7 +85,7 @@
   background: #fff url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%3E%3Cpath%20d%3D%22M4.33%208.5L0%201L8.66%201z%22%20fill%3D%22%2327ae60%22%2F%3E%3C%2Fsvg%3E') right 10px center no-repeat;
 }
 .theme-square select {
-  padding: 12px 32px 12px 12px;
+  padding: 12px 38px 12px 12px;
   /* You can style text of the active select option */
   font: 700 16px/1 'Montserrat', sans-serif;
   text-transform: uppercase;
@@ -91,7 +101,7 @@
   background: #fff url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2222%22%20viewBox%3D%220%200%2018%2022%22%3E%3Cpath%20d%3D%22M9%2017L2.07%205L15.93%205z%22%20stroke-width%3D%222%22%20stroke%3D%22%232980b9%22%20fill%3D%22transparent%22%2F%3E%3C%2Fsvg%3E') right 14px center no-repeat;
 }
 .theme-rounded select {
-  padding: 12px 32px 12px 16px;
+  padding: 12px 38px 12px 16px;
   font: 400 16px/1 'Montserrat', sans-serif;
   letter-spacing: 2px;
   color: #2980b9;
@@ -105,13 +115,10 @@
   box-shadow: 0px 10px 10px -6px rgba(0,0,0,0.25);
 }
 .theme-filled select {
-  padding: 12px 32px 12px 16px;
+  padding: 14px 38px 14px 16px;
   font: 400 16px/1 'Montserrat', sans-serif;
   letter-spacing: 2px;
-  color: #fff;
-}
-.theme-filled select option {
-  color: #333;
+  color: #fff; /* Cution this is not recommended on IE9! */
 }
 
 /* Background gradient ------------------------------------------------------ */
@@ -129,7 +136,7 @@
   background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%3E%3Cpath%20d%3D%22M4.33%208.5L0%201L8.66%201z%22%20fill%3D%22%23666%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(#ecf0f1, #bdc3c7); /* W3C */
 }
 .theme-gradient select {
-  padding: 12px 32px 12px 16px;
+  padding: 12px 38px 12px 16px;
   font: 700 14px/1 'Open Sans', sans-serif;
   letter-spacing: 2px;
   color: #666;
